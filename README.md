@@ -13,10 +13,5 @@
 
 ```
 type/#Issue No.
-ex) feature/#3
-```
-
-3. 해당 이슈 브랜치 내부에서의 커밋은 메시지에 이슈 번호를 붙인다.
-```
-feat : add some (#3)
+ex) feat/3-(feature이름)
 ```
