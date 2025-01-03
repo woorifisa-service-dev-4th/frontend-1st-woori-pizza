@@ -60,3 +60,21 @@ body {
 .fifth > .table {
   width: auto;
 }
+
+.desk_bell {
+    justify-self: center;
+    align-self: flex-end;
+    width: 8vw;
+    height: 8vw;
+    cursor: pointer;
+    background-image: url("bell1.png");
+    background-size: cover;
+    background-position: center;
+
+}
+
+.desk_bell:active {
+    background-image: url("bell2.png");
+    background-size: cover;
+    background-position: center;
+}
