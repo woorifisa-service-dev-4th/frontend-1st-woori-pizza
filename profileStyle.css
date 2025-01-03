@@ -1,0 +1,70 @@
+/* 전체 레이아웃 설정 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 부모 요소 */
+.image-container {
+  position: relative; /* 부모 요소를 relative로 설정하여 자식 요소들이 이 요소를 기준으로 배치되게 함 */
+  width: 100%; /* 화면 너비 */
+  height: 100vh; /* 화면 높이 */
+}
+
+/* 첫 번째 이미지 (피자 박스 이미지) */
+.pizza-box {
+  position: relative; /* 피자 박스의 부모를 상대적 위치로 설정 */
+  width: 100%; /* 화면 크기에 맞게 이미지 크기 */
+  height: 100%; /* 화면 크기에 맞게 이미지 크기 */
+  display: flex;
+  justify-content: center; /* 수평 중앙 정렬 */
+  /* align-items: center;     */
+  /* 수직 중앙 정렬 */
+}
+
+/* 프로필 이미지와 이름을 포함하는 컨테이너 */
+.profile-container {
+  position: absolute; /* 절대 위치 설정 */
+  top: 33%; /* 화면 중앙에 위치 */
+  left: 48%; /* 화면 중앙에 위치 */
+  transform: translate(-50%, -50%); /* 정확히 중앙으로 이동 */
+  display: flex;
+  flex-direction: column; /* 이미지와 텍스트를 세로로 배치 */
+  align-items: center; /* 수평 중앙 정렬 */
+  max-width: 300px;
+}
+
+/* 프로필 이미지 스타일 */
+.profile-img {
+  width: 25%; /* 프로필 이미지 크기 설정 */
+  max-width: 20px; /* 최대 크기 설정 */
+}
+
+/* 프로필 이름 스타일 */
+.profile-name {
+  font-size: 50px;
+  color: #333; /* 텍스트 색상 */
+  font-weight: bold; /* 텍스트 두껍게 */
+  margin-top: 10px; /* 이미지와 텍스트 간의 간격 */
+}
+
+/* 반응형 이미지 크기 조정 */
+.pizza-box img {
+  width: 100%; /* 기본 크기: 화면 크기에 따라 100% */
+  max-width: 780px; /* 최대 너비 설정 */
+}
+
+/* 화면 크기가 768px 이하일 때 */
+@media (max-width: 768px) {
+  .pizza-box img {
+    width: 80%; /* 작은 화면에서는 이미지 너비를 80%로 설정 */
+  }
+}
+
+/* 화면 크기가 480px 이하일 때 */
+@media (max-width: 480px) {
+  .pizza-box img {
+    width: 100%; /* 매우 작은 화면에서는 이미지 너비를 100%로 설정 */
+  }
+}
