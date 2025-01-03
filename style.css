@@ -55,22 +55,21 @@ body {
   box-shadow: 10px 10px 1px rgb(195, 191, 191);
 }
 
-.leftTable{
-    display: flex;
-    width: 40vw;
-    display: inline-flex;
-    background-color: #7c4b34;
-    box-shadow: -10px 10px 1px rgb(195, 191, 191);
+.leftTable {
+  display: flex;
+  width: 40vw;
+  display: inline-flex;
+  background-color: #7c4b34;
+  box-shadow: -10px 10px 1px rgb(195, 191, 191);
 }
 
-.rightTable{
-    display: flex;
-    width: 40vw;
-    display: inline-flex;
-    background-color: #7c4b34;
-    box-shadow: 10px 10px 1px rgb(195, 191, 191);
+.rightTable {
+  display: flex;
+  width: 40vw;
+  display: inline-flex;
+  background-color: #7c4b34;
+  box-shadow: 10px 10px 1px rgb(195, 191, 191);
 }
-
 
 .pizza_box {
   width: 8vw;
@@ -84,7 +83,7 @@ body {
 }
 
 .fifth > .rightTable {
-    width: auto;
+  width: auto;
 }
 
 .desk_bell {
