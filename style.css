@@ -1,62 +1,62 @@
 @font-face {
-    font-family: 'woori-font';
-    src: url('WooridaumL.ttf') format('truetype');
+  font-family: "woori-font";
+  src: url("WooridaumL.ttf") format("truetype");
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
 .header {
-    display:flex;
-    justify-content : center;
-    width: 100%;
-    height: 10vh;
-    font-size: 50px;
-    font-family: "WooridaumL";
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 10vh;
+  font-size: 50px;
+  font-family: "WooridaumL";
 }
 
-
 .body-section {
-    width:100%;
-    height: 100vh;
-    background-image: url("backgroundPage.png");
-    background-size: cover; 
-    background-position: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url("backgroundPage.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .seat-section {
-    width: 96%;
-    /* height: 100vh; */
-    display: flex;
-    justify-self: center;
-    flex-direction: column;
+  width: 96%;
+  /* height: 100vh; */
+  display: flex;
+  justify-self: center;
+  flex-direction: column;
 }
 
 .line {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 15vh;
-    margin-top: 1vh;
-    margin-bottom: 1vh;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 15vh;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
 }
 
 .table {
-    display: flex;
-    width: 40vw;
-    display: inline-flex;
-    background-color: #7c4b34;
+  display: flex;
+  width: 40vw;
+  display: inline-flex;
+  background-color: #7c4b34;
 }
 
 .pizza_box {
-    width: 8vw;
-    height: auto;
-    margin-left: 1vw;
-    margin-right: 1vw;
+  width: 8vw;
+  height: auto;
+  margin-left: 1vw;
+  margin-right: 1vw;
 }
 
 .fifth > .table {
-    width: auto;
+  width: auto;
 }
