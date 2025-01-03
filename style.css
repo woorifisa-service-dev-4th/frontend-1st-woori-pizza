@@ -107,3 +107,16 @@ body {
     background-size: cover;
     background-position: center;
 }
+
+.name_tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-color: #fff;
+  border: 1.5px solid #000;
+  font-family: "woori-font";
+}
