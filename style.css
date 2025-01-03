@@ -1,6 +1,6 @@
 @font-face {
   font-family: "woori-font";
-  src: url("WooridaumR.ttf") format("truetype");
+  src: url("/fonts/WooridaumR.ttf") format("truetype");
 }
 
 html,
