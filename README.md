@@ -46,3 +46,9 @@ Feat: 000구현
 
 2. 개인 프로필 화면 : 본인의 아이콘을 통해 개인 프로필 화면으로 접속
    ![개인 프로필 화면](/images/readme2.png)
+
+## 성능
+
+1. HTML & CSS만 적용했을 때 성능
+
+   ![alt text](/images/lighthouse1.png)
