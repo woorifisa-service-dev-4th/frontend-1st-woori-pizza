@@ -49,6 +49,6 @@ Feat: 000구현
 
 ## 성능
 
-1. HTML & CSS만 적용
+1. HTML & CSS만 적용했을 때 성능
 
    ![alt text](/images/lighthouse1.png)
