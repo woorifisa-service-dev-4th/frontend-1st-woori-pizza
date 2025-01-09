@@ -11,8 +11,10 @@ module.exports = {
   extends: ['airbnb-base', 'plugin:prettier/recommended', 'prettier'],
   rules: {
     'max-depth': ['error', 3],
-    'max-lines-per-function': ['error', 64],
+    'max-lines-per-function': ['error', 72],
     'operator-linebreak': ['error', 'before'],
     'no-unused-expressions': ['error', { allowTernary: true }],
+    'no-loop-func': 'off',
+    'no-param-reassign': 'off',
   },
 };

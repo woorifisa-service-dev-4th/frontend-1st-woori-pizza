@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
         nameSet(nameArr2);
       });
     }
-  }, 0); // 0ms 후에 실행 (조정 가능)
+  }, 100); // 100ms 후에 실행 (조정 가능)
 });
 
 function Fisher_Yates_shuffle(arr) {
