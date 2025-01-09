@@ -44,9 +44,11 @@ const nameArr = [
 
 const modal = document.querySelector('.modal');
 const modalClose = document.querySelector('.close_btn');
+const profileFrame = document.querySelector("iframe");
 
 modalClose.addEventListener('click', () => {
   modal.classList.remove('on');
+  profileFrame.src = "";
 });
 
 const checkLine = (num) => {
@@ -91,18 +93,22 @@ window.onload = () => {
       seat.setAttribute('class', 'seat');
 
       pizza = document.createElement('img');
-      pizza.addEventListener('click', () => {
-        modal.classList.add('on');
+      pizza.addEventListener("click", () => {
+        const selectedName = nameArr[i][index]; // 클릭한 이름
+        profileFrame.src = `profile.html?name=${encodeURIComponent(
+          selectedName
+        )}`; // iframe src 설정
+        modal.classList.add("on"); // 모달 열기
       });
       pizza.setAttribute('class', 'pizza_box');
       pizza.setAttribute('src', 'images/pizza_box.png');
       pizza.setAttribute('alt', 'closed pizza box');
 
       nameArea = document.createElement('div');
-      nameArea.setAttribute('class', 'nameArea');
+      nameArea.setAttribute('class', 'name_area');
 
       nameTag = document.createElement('div');
-      nameTag.setAttribute('class', 'nameTag');
+      nameTag.setAttribute('class', 'name_tag');
       nameTag.innerText = nameArr[i][index];
 
       nameArea.appendChild(nameTag);
@@ -116,7 +122,7 @@ window.onload = () => {
       }
     }
 
-      line.appendChild(leftTable);
+    line.appendChild(leftTable);
 
     if (i === 4) {
       const deskBell = document.createElement('div');
