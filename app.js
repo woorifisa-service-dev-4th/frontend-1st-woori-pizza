@@ -126,7 +126,7 @@ window.onload = () => {
 
     if (i === 4) {
       const deskBell = document.createElement('div');
-      deskBell.setAttribute('class', 'deskBell');
+      deskBell.setAttribute('class', 'desk_bell');
       line.appendChild(deskBell);
     }
 
@@ -134,3 +134,51 @@ window.onload = () => {
     seatSection.appendChild(line);
   }
 };
+
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    const bellButton = document.querySelector(".desk_bell");
+    console.log(bellButton);
+    if (bellButton) {
+      bellButton.addEventListener("click", () => {
+        // 이름 섞기
+        const nameArr2 = Fisher_Yates_shuffle(nameArr);
+        // 결과를 웹페이지에 표시
+        nameSet(nameArr2);
+      });
+    }
+  }, 0); // 0ms 후에 실행 (조정 가능)
+});
+
+function Fisher_Yates_shuffle(arr) {
+  // 2D 배열을 1D 배열 형태로 변환
+  const nameArr2 = arr.flat();
+
+  // Fisher-Yates 알고리즘으로 배열 섞기
+  for (let i = nameArr2.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [nameArr2[i], nameArr2[j]] = [nameArr2[j], nameArr2[i]]; // Swap elements
+  }
+
+  // 1D 배열을 원래의 2D 배열 형태로 복원
+  const result = [];
+  for (let i = 0; i < arr.length-1; i++) {
+      result.push(nameArr2.slice(i * 8, (i + 1) * 8)); // 각 하위 배열에 8명씩 넣기
+  }
+  
+  result.push(nameArr2.slice((arr.length - 1) * 8));
+
+  return result;
+}
+
+//이름 표시
+function nameSet(arr) {
+  // 'nameArr'가 섞였으므로 각 nameTag의 innerText를 새롭게 갱신
+  const nameTags = document.querySelectorAll('.name_tag'); // 모든 nameTag 요소 선택
+  nameTags.forEach((nameTag, index) => {
+    // 수정하려는 값으로 업데이트
+    nameTag.innerText = arr[Math.floor(index / 8)][index % 8];
+  });
+  
+}
+
