@@ -21,7 +21,11 @@ body {
 .body-section {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)), url("images/backgroundPage.png");
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url("images/backgroundPage.png");
   background-size: cover;
   background-position: center;
 }
@@ -91,21 +95,20 @@ body {
 }
 
 .desk_bell {
-    justify-self: center;
-    align-self: flex-end;
-    width: 8vw;
-    height: 8vw;
-    cursor: pointer;
-    background-image: url("images/bell1.png");
-    background-size: cover;
-    background-position: center;
-
+  justify-self: center;
+  align-self: flex-end;
+  width: 8vw;
+  height: 8vw;
+  cursor: pointer;
+  background-image: url("images/bell1.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .desk_bell:active {
-    background-image: url("images/bell2.png");
-    background-size: cover;
-    background-position: center;
+  background-image: url("images/bell2.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .name_tag {
@@ -126,40 +129,39 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
 }
 
 .modal {
   /*팝업 배경*/
-    display: none; /*평소에는 보이지 않도록*/
-      position: absolute;
-      top:0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background: rgba(0,0,0,0.5);
-  }
-  .modal .modal_popup {
+  display: none; /*평소에는 보이지 않도록*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.5);
+}
+.modal .modal_popup {
   /*팝업*/
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      padding: 20px;
-      background: #ffffff;
-      border-radius: 20px;
-  }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 20px;
+}
 
 .modal.on {
   display: block;
 }
 
 #circle {
-  width : 1.5vw;
-  height : 1.5vw;
+  width: 1.5vw;
+  height: 1.5vw;
   border-radius: 50%;
   background-color: red;
-
 }
