@@ -47,6 +47,13 @@ const name_arr = [
 ]
 ];
 
+const modal = document.querySelector('.modal');
+const modalClose = document.querySelector('.close_btn');
+
+modalClose.addEventListener('click',function(){
+    modal.classList.remove('on');
+});
+
 checkLine = (num) => {
     switch(num) {
         case 1:
@@ -89,6 +96,9 @@ window.onload = () => {
             seat.setAttribute('class', 'seat');
 
             pizza = document.createElement('img');
+            pizza.addEventListener('click', ()=> {
+                modal.classList.add('on');
+            });
             pizza.setAttribute('class', 'pizza_box');
             pizza.setAttribute('src', 'images/pizza_box.png');
             pizza.setAttribute('alt', 'closed pizza box');
