@@ -25,10 +25,8 @@ body {
 .body-section {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.7),
-      rgba(255, 255, 255, 0.7)
-    ),
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)),
     url("./assets/images/backgroundPage.png");
   background-size: cover;
   background-position: center;
@@ -55,7 +53,7 @@ body {
   display: flex;
   width: 40vw;
   display: inline-flex;
-  background-color: #7c4b34;
+  background-color: #7C4B34;
   box-shadow: 10px 10px 1px rgb(195, 191, 191);
 }
 
@@ -63,7 +61,7 @@ body {
   display: flex;
   width: 40vw;
   display: inline-flex;
-  background-color: #7c4b34;
+  background-color: #7C4B34;
   box-shadow: -10px 10px 1px rgb(195, 191, 191);
 }
 
@@ -71,7 +69,7 @@ body {
   display: flex;
   width: 40vw;
   display: inline-flex;
-  background-color: #7c4b34;
+  background-color: #7C4B34;
   box-shadow: 10px 10px 1px rgb(195, 191, 191);
 }
 
@@ -90,11 +88,11 @@ body {
   margin-right: 1vw;
 }
 
-#fifth_line > .leftTable {
+#fifth_line>.leftTable {
   width: auto;
 }
 
-#fifth_line > .rightTable {
+#fifth_line>.rightTable {
   width: auto;
 }
 
@@ -157,7 +155,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 20px;
-  background: #ffffff;
+  background: #FFFFFF;
   border-radius: 20px;
   width: 300px;
   height: 400px;
@@ -172,26 +170,4 @@ body {
   height: 1.5vw;
   border-radius: 50%;
   background-color: red;
-}
-.description-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 85%;
-  max-width: 300px;
-  margin: 0 auto;
-}
-
-.description-input {
-  border: 2px solid black;
-  outline: none;
-  box-shadow: none;
-  border-radius: 4px;
-  padding: 8px;
-  min-height: 100px; /* 최소 높이를 지정 */
-}
-
-textarea {
-  width: 100%;
-  height: 100%;
 }
