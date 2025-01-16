@@ -1,18 +1,18 @@
 const PROF_IMAGE_SRC = {
     "PEPPERONI" : {
-        src : "@/assets/images/pepperoni.png",
+        src : "/src/assets/images/pepperoni.png",
         alt : "pepperoni image"
     },
     "BACON" : {
-        src : "@/assets/images/bacon.png",
+        src : "/src/assets/images/bacon.png",
         alt : "bacon image",
     },
     "CHEESE" : {
-        src : "@/assets/images/cheese.png",
+        src : "/src/assets/images/cheese.png",
         alt : "cheese image",
     },
     "TOMATO" : {
-        src : "@/assets/images/tomato.png",
+        src : "/src/assets/images/tomato.png",
         alt : "tomato image"
     },
 }

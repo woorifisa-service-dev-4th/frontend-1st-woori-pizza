@@ -48,6 +48,8 @@ let initialNameArr = [
   ["황혜영", "황유환", "허연규", "차승훈"],
 ];
 
+let descriptionArr = [];
+
 function App() {
   const iterator = [1, 2, 3, 4, 5];
   const [nameArr, setNameArr] = useState(initialNameArr);
@@ -57,7 +59,7 @@ function App() {
     col: 1,
     row: 1,
   });
-  const [isModalOn, setModal] = useState(false);
+  // const [isModalOn, setModal] = useState(false);
   let ind = 0;
 
   const seatSection = newNameArr.map(() => <Line order={iterator[ind++]} />);
@@ -65,7 +67,7 @@ function App() {
   return (
     <ModalContext.Provider value={{ modalData, setModal }}>
       <NameArrContext.Provider value={{ nameArr, setNameArr }}>
-        <Modal />
+        {modal && <Modal />}
         <div className="header">WOORI-PIZZA</div>
         <div className="body-section">
           <div className="seat-section">{seatSection}</div>
