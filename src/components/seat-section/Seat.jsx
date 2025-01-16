@@ -13,7 +13,7 @@ const Seat = ({ name }) => {
       .find((user) => user.name === name); // 클릭된 name에 해당하는 유저 찾기
     if (selectedUser) {
       userArrContext.setSelectedUser(selectedUser); // selectedUser 설정
-      modalContext.setModal(true); // 모달 열기
+      modalContext.setModal({ isModalOn: true, modalType: "PROFILE" }); // 모달 열기
     }
   };
 
@@ -31,7 +31,7 @@ const Seat = ({ name }) => {
           onClick={() => {
             if (name !== "빈자리") {
               handleSeatClick();
-              modalContext.setModal(true);
+              modalContext.setModal({ isModalOn: true, modalType: "PROFILE" });
             }
           }}
         />
