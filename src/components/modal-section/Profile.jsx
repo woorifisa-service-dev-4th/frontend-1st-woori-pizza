@@ -36,7 +36,7 @@ export const Profile = () => {
         onClick={() => {}}
       />
       <button
-        className="pl-[1vw] pr-[3.5vw]"
+        className="pl-[1vw] pr-[1vw]"
         onClick={() => {
           const newArr = [...userArrContext.userArr];
           const selected = newArr
