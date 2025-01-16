@@ -1,15 +1,15 @@
-import React from 'react';
-import imgLogo from '@/assets/images/pizza_box.png'
+import React from "react";
+import imgLogo from "@/assets/images/pizza_box.png";
 
 const Seat = ({ name }) => {
   return (
     <div className="seat" id={name}>
       <img
         className="pizza_box"
-        src= {imgLogo}
+        src={imgLogo}
         alt="closed pizza box"
         onClick={() => {
-          console.log('clicked!');
+          console.log("clicked!");
         }}
       />
       <div className="name_area">

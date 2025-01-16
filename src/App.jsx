@@ -2,6 +2,7 @@ import { useState } from "react";
 import Line from "./components/seat-section/Line";
 import Modal from "./components/modal-section/Modal";
 import { NameArrContext } from "./contexts/NameArrContext";
+import { ModalContext } from "./contexts/ModalContext";
 
 let initialNameArr = [
   [
@@ -51,19 +52,25 @@ function App() {
   const iterator = [1, 2, 3, 4, 5];
   const [nameArr, setNameArr] = useState(initialNameArr);
   const newNameArr = [...nameArr];
-
+  const [modalData, setModalData] = useState({
+    col: 1,
+    row: 1,
+  });
+  const [isModalOn, setModal] = useState(false);
   let ind = 0;
 
   const seatSection = newNameArr.map(() => <Line order={iterator[ind++]} />);
 
   return (
-    <NameArrContext.Provider value={{ nameArr, setNameArr }}>
-      <Modal />
-      <div className="header">WOORI-PIZZA</div>
-      <div className="body-section">
-        <div className="seat-section">{seatSection}</div>
-      </div>
-    </NameArrContext.Provider>
+    <ModalContext.Provider value={{ modalData, setModal }}>
+      <NameArrContext.Provider value={{ nameArr, setNameArr }}>
+        <Modal />
+        <div className="header">WOORI-PIZZA</div>
+        <div className="body-section">
+          <div className="seat-section">{seatSection}</div>
+        </div>
+      </NameArrContext.Provider>
+    </ModalContext.Provider>
   );
 }
 
