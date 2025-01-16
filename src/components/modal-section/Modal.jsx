@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Profile } from "./Profile";
 import { NameArrContext } from "../../contexts/NameArrContext";
+import Description from "./Description";
 import { ModalContext } from "../../contexts/ModalContext";
 
 const Modal = () => {
@@ -20,6 +21,7 @@ const Modal = () => {
             onClick={() => modalContext.setModal(false)}
           ></button>
           <Profile />
+          <Description />
         </div>
       </div>
     </>

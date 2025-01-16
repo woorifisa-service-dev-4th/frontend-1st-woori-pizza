@@ -2,6 +2,7 @@ import { useState } from "react";
 import Line from "./components/seat-section/Line";
 import Modal from "./components/modal-section/Modal";
 import { NameArrContext } from "./contexts/NameArrContext";
+import data from "./assets/data.json";
 import { ModalContext } from "./contexts/ModalContext";
 
 let initialNameArr = [
@@ -52,8 +53,8 @@ let descriptionArr = [];
 
 function App() {
   const iterator = [1, 2, 3, 4, 5];
-  const [nameArr, setNameArr] = useState(initialNameArr);
-  const [modal, setModal] = useState(true);
+  const [nameArr, setNameArr] = useState(data.users);
+  const [modal, setModal] = useState(false);
   const newNameArr = [...nameArr];
   const [modalData, setModalData] = useState({
     // TODO: 동적으로 행열 설정해주기
