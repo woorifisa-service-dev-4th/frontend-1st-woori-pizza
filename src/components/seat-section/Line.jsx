@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import Table from "./Table";
 import { LINE_NUMBER } from "../../constants/lineNumber";
-import { NameArrContext } from "../../contexts/NameArrContext";
+import { UserArrContext } from "../../contexts/UserArrContext";
 
 const Line = ({ order }) => {
-  const { nameArr, setNameArr } = useContext(NameArrContext);
+  const { userArr, setUserArr } = useContext(UserArrContext);
   let id;
 
   switch (order) {
@@ -38,24 +38,26 @@ const Line = ({ order }) => {
   };
 
   const BellHandler = () => {
-    const flattenedArray = nameArr.flat();
+    const flattenedArray = userArr.flat();
 
     const shuffledArray = shuffleName(flattenedArray);
 
     const updatedArr = [];
     let index = 0;
-    for (let i = 0; i < nameArr.length; i++) {
-      updatedArr.push(shuffledArray.slice(index, index + nameArr[i].length));
-      index += nameArr[i].length;
+    for (let i = 0; i < userArr.length; i++) {
+      updatedArr.push(shuffledArray.slice(index, index + userArr[i].length));
+      index += userArr[i].length;
     }
 
-    setNameArr(updatedArr);
+    setUserArr(updatedArr);
   };
 
   return (
     <div className="line" id={LINE_NUMBER[order]}>
       <Table direction={"leftTable"} order={order} />
-      {LINE_NUMBER[order] === "fifth_line" && <div className="desk_bell"></div>}
+      {LINE_NUMBER[order] === "fifth_line" && (
+        <div className="desk_bell" onClick={BellHandler}></div>
+      )}
       <Table direction={"rightTable"} order={order} />
     </div>
   );

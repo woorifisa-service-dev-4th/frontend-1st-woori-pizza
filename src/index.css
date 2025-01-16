@@ -29,10 +29,6 @@ body {
       rgba(255, 255, 255, 0.7),
       rgba(255, 255, 255, 0.7)
     ),
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.7),
-      rgba(255, 255, 255, 0.7)
-    ),
     url("./assets/images/backgroundPage.png");
   background-size: cover;
   background-position: center;
@@ -96,7 +92,6 @@ body {
   margin-right: 1vw;
 } */
 
-#fifth_line > .leftTable {
 #fifth_line > .leftTable {
   width: auto;
 }
