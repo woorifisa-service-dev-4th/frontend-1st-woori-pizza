@@ -11,7 +11,7 @@ function App() {
     : data.users;
 
   const [userArr, setUserArr] = useState(initialUserArr);
-  const [isModalOn, setModal] = useState(false);
+  const [modalData, setModal] = useState({ isModalOn: false, modalType: null });
 
   const newUsersArr = [...userArr];
   const [selectedUser, setSelectedUser] = useState(null); // Store selected user
@@ -32,13 +32,14 @@ function App() {
   };
 
   useEffect(() => {
+    console.log(`useEffect: ${userArr}`);
     localStorage.setItem("userArr", JSON.stringify(userArr));
   }, [userArr]);
 
   const seatSection = newUsersArr.map((_, ind) => <Line order={ind + 1} />);
 
   return (
-    <ModalContext.Provider value={{ isModalOn, setModal }}>
+    <ModalContext.Provider value={{ modalData, setModal }}>
       <UserArrContext.Provider
         value={{
           userArr,
@@ -48,8 +49,21 @@ function App() {
           setSelectedUser,
         }}
       >
-        {isModalOn && <Modal />}
-        <div className="header">WOORI-PIZZA</div>
+        {modalData.isModalOn && <Modal />}
+        <div className="flex justify-between w-full h-[10vh] text-[10vh] font-woorifont pb-[15vh] pl-[2.5vw] pr-[2.5vw]">
+          {}
+          <button disabled className="opacity-0">
+            &#128203;
+          </button>
+          WOORI-PIZZA{" "}
+          <button
+            onClick={() => {
+              setModal({ isModalOn: true, modalType: "EDIT" });
+            }}
+          >
+            &#128203;
+          </button>
+        </div>
         <div className="body-section">
           <div className="seat-section">{seatSection}</div>
         </div>

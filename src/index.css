@@ -13,16 +13,6 @@ body {
   padding: 0;
 }
 
-.header {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 10vh;
-  font-size: 10vh;
-  font-family: "woori-font";
-  padding-bottom: 15vh;
-}
-
 .body-section {
   width: 100%;
   height: 90vh;
