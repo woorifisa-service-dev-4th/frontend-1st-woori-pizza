@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const Description = ({ text, setText }) => {
+const Description = () => {
+    const [text, setText] = useState('');
+
     const onChange = (e) => {
         setText(e.target.value);
     };
@@ -11,7 +13,7 @@ const Description = ({ text, setText }) => {
                 type="text"
                 onChange={onChange}
                 value={text}
-                placeholder={"상세설명을 입력해주세요"}
+                placeholder="상세설명을 적어주세요"
             />
         </div>
     );

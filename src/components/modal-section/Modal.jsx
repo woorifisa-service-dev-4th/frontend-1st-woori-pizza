@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { NameArrContext } from "../../contexts/NameArrContext";
+import Description from "./Description";
 
 const Modal = () => {
   const context = useContext(NameArrContext);
@@ -12,6 +13,7 @@ const Modal = () => {
             id="circle"
             onClick={() => context.setModal(false)}
           ></button>
+          <Description />
         </div>
       </div>
     </>
