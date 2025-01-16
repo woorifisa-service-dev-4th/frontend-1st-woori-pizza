@@ -4,62 +4,43 @@ import Modal from "./components/modal-section/Modal";
 import { NameArrContext } from "./contexts/NameArrContext";
 import data from "./assets/data.json";
 
-let initialNameArr = [
-  [
-    "구본훈",
-    "김승호",
-    "김소민",
-    "김성준",
-    "윤영찬",
-    "김새봄",
-    "권지윤",
-    "권민지",
-  ],
-  [
-    "서용준",
-    "배승혁",
-    "박찬진",
-    "마서영",
-    "노영재",
-    "남승현",
-    "김지연",
-    "이정민",
-  ],
-  [
-    "이서연",
-    "윤태경",
-    "윤예진",
-    "윤선영",
-    "유승한",
-    "여은동",
-    "신희원",
-    "서채연",
-  ],
-  [
-    "조현식",
-    "조윤주",
-    "임지섭",
-    "이현경",
-    "이한비",
-    "이원빈",
-    "이승준",
-    "이소연",
-  ],
-  ["황혜영", "황유환", "허연규", "차승훈"],
-];
-
 function App() {
   const iterator = [1, 2, 3, 4, 5];
   const [nameArr, setNameArr] = useState(data.users);
   const [modal, setModal] = useState(false);
   const newNameArr = [...nameArr];
+  const [selectedUser, setSelectedUser] = useState(null); // Store selected user
 
   let ind = 0;
+  const updateDescription = (id, newDescription) => {
+    // id를 기준으로 해당 사용자의 description을 업데이트
+    setNameArr((prevArr) => {
+      const updatedArr = prevArr.map((group) => {
+        return group.map((user) => {
+          if (user.id === id) {
+            return { ...user, description: newDescription }; // description을 업데이트
+          }
+          return user;
+        });
+      });
+      return updatedArr;
+    });
+  };
 
   const seatSection = newNameArr.map(() => <Line order={iterator[ind++]} />);
 
   return (
-    <NameArrContext.Provider value={{ nameArr, setNameArr, modal, setModal }}>
+    <NameArrContext.Provider
+      value={{
+        nameArr,
+        setNameArr,
+        modal,
+        setModal,
+        updateDescription,
+        selectedUser,
+        setSelectedUser,
+      }}
+    >
       {modal && <Modal />}
       <div className="header">WOORI-PIZZA</div>
       <div className="body-section">
