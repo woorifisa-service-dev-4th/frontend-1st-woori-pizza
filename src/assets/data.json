@@ -1,50 +1,50 @@
 {
   "users": [
     [
-      { "id": 1, "name": "구본훈", "img": "", "description": "" },
-      { "id": 2, "name": "김승호", "img": "", "description": "" },
-      { "id": 3, "name": "김소민", "img": "", "description": "" },
-      { "id": 4, "name": "김성준", "img": "", "description": "" },
-      { "id": 5, "name": "윤영찬", "img": "", "description": "" },
-      { "id": 6, "name": "김새봄", "img": "", "description": "" },
-      { "id": 7, "name": "권지윤", "img": "", "description": "" },
-      { "id": 8, "name": "권민지", "img": "", "description": "" }
+      { "id": 1, "name": "구본훈", "img": "PEPPERONI", "description": "" },
+      { "id": 2, "name": "김승호", "img": "BACON", "description": "" },
+      { "id": 3, "name": "김소민", "img": "CHEESE", "description": "" },
+      { "id": 4, "name": "김성준", "img": "TOMATO", "description": "" },
+      { "id": 5, "name": "윤영찬", "img": "PEPPERONI", "description": "" },
+      { "id": 6, "name": "김새봄", "img": "BACON", "description": "" },
+      { "id": 7, "name": "권지윤", "img": "CHEESE", "description": "" },
+      { "id": 8, "name": "권민지", "img": "TOMATO", "description": "" }
     ],
     [
-      { "id": 9, "name": "서용준", "img": "", "description": "" },
-      { "id": 10, "name": "배승혁", "img": "", "description": "" },
-      { "id": 11, "name": "박찬진", "img": "", "description": "" },
-      { "id": 12, "name": "마서영", "img": "", "description": "" },
-      { "id": 13, "name": "노영재", "img": "", "description": "" },
-      { "id": 14, "name": "남승현", "img": "", "description": "" },
-      { "id": 15, "name": "김지연", "img": "", "description": "" },
-      { "id": 16, "name": "이정민", "img": "", "description": "" }
+      { "id": 9, "name": "서용준", "img": "PEPPERONI", "description": "" },
+      { "id": 10, "name": "배승혁", "img": "BACON", "description": "" },
+      { "id": 11, "name": "박찬진", "img": "CHEESE", "description": "" },
+      { "id": 12, "name": "마서영", "img": "TOMATO", "description": "" },
+      { "id": 13, "name": "노영재", "img": "PEPPERONI", "description": "" },
+      { "id": 14, "name": "남승현", "img": "BACON", "description": "" },
+      { "id": 15, "name": "김지연", "img": "CHEESE", "description": "" },
+      { "id": 16, "name": "이정민", "img": "TOMATO", "description": "" }
     ],
     [
-      { "id": 17, "name": "이서연", "img": "", "description": "" },
-      { "id": 18, "name": "윤태경", "img": "", "description": "" },
-      { "id": 19, "name": "윤예진", "img": "", "description": "" },
-      { "id": 20, "name": "윤선영", "img": "", "description": "" },
-      { "id": 21, "name": "유승한", "img": "", "description": "" },
-      { "id": 22, "name": "여은동", "img": "", "description": "" },
-      { "id": 23, "name": "신희원", "img": "", "description": "" },
-      { "id": 24, "name": "서채연", "img": "", "description": "" }
+      { "id": 17, "name": "이서연", "img": "PEPPERONI", "description": "" },
+      { "id": 18, "name": "윤태경", "img": "BACON", "description": "" },
+      { "id": 19, "name": "윤예진", "img": "CHEESE", "description": "" },
+      { "id": 20, "name": "윤선영", "img": "TOMATO", "description": "" },
+      { "id": 21, "name": "유승한", "img": "PEPPERONI", "description": "" },
+      { "id": 22, "name": "여은동", "img": "BACON", "description": "" },
+      { "id": 23, "name": "신희원", "img": "CHEESE", "description": "" },
+      { "id": 24, "name": "서채연", "img": "TOMATO", "description": "" }
     ],
     [
-      { "id": 25, "name": "조현식", "img": "", "description": "" },
-      { "id": 26, "name": "조윤주", "img": "", "description": "" },
-      { "id": 27, "name": "임지섭", "img": "", "description": "" },
-      { "id": 28, "name": "이현경", "img": "", "description": "" },
-      { "id": 29, "name": "이한비", "img": "", "description": "" },
-      { "id": 30, "name": "이원빈", "img": "", "description": "" },
-      { "id": 31, "name": "이승준", "img": "", "description": "" },
-      { "id": 32, "name": "이소연", "img": "", "description": "" }
+      { "id": 25, "name": "조현식", "img": "PEPPERONI", "description": "" },
+      { "id": 26, "name": "조윤주", "img": "BACON", "description": "" },
+      { "id": 27, "name": "임지섭", "img": "CHEESE", "description": "" },
+      { "id": 28, "name": "이현경", "img": "TOMATO", "description": "" },
+      { "id": 29, "name": "이한비", "img": "PEPPERONI", "description": "" },
+      { "id": 30, "name": "이원빈", "img": "BACON", "description": "" },
+      { "id": 31, "name": "이승준", "img": "CHEESE", "description": "" },
+      { "id": 32, "name": "이소연", "img": "TOMATO", "description": "" }
     ],
     [
-      { "id": 33, "name": "황혜영", "img": "", "description": "" },
-      { "id": 34, "name": "황유환", "img": "", "description": "" },
-      { "id": 35, "name": "허연규", "img": "", "description": "" },
-      { "id": 36, "name": "차승훈", "img": "", "description": "" }
+      { "id": 33, "name": "황혜영", "img": "PEPPERONI", "description": "" },
+      { "id": 34, "name": "황유환", "img": "BACON", "description": "" },
+      { "id": 35, "name": "허연규", "img": "CHEESE", "description": "" },
+      { "id": 36, "name": "차승훈", "img": "TOMATO", "description": "" }
     ]
   ]
 }

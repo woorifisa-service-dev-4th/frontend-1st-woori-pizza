@@ -19,10 +19,12 @@ const Table = ({ direction, order }) => {
     names.push(originArr[ind]);
   }
 
+  ind = direction === "leftTable" ? 0 : originArr.length / 2;
+
   return (
     <div className={direction}>
       {names.map((name) => {
-        return <Seat name={name.name} />;
+        return <Seat col={order - 1} row={ind++} />;
       })}
     </div>
   );
