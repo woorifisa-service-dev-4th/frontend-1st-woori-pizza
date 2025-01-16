@@ -33,7 +33,7 @@ export const Profile = () => {
         className="w-auto h-[5vh]"
         src={PROF_IMAGE_SRC[selectedUser.img].src}
         alt={PROF_IMAGE_SRC[selectedUser.img].alt}
-        onClick={() => {}}
+        onClick={() => { }}
       />
       <button
         className="pl-[1vw] pr-[3.5vw]"
