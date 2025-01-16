@@ -15,17 +15,36 @@ const Line = ({ order }) => {
     return shuffled;
   };
 
+  const countSameSeat = (prevArray, newArray) => {
+    let count = 0;
+    for (let i = 0; i < prevArray.length; i++) {
+      for (let j = 0; j < prevArray[i].length; j++) {
+        if (prevArray[i][j] === newArray[i][j]) {
+          count++;
+          if (count >= 6)
+            return count;
+        }
+      }
+    }
+    return count;
+  };
+
   const BellHandler = () => {
     const flattenedArray = userArr.flat();
+    let sameSeatCount = 0;
+    let updatedArr = [];
 
-    const shuffledArray = shuffleName(flattenedArray);
+    do {
+      const shuffledArray = shuffleName(flattenedArray);
 
-    const updatedArr = [];
-    let index = 0;
-    for (let i = 0; i < userArr.length; i++) {
-      updatedArr.push(shuffledArray.slice(index, index + userArr[i].length));
-      index += userArr[i].length;
-    }
+      updatedArr = [];
+      let index = 0;
+      for (let i = 0; i < userArr.length; i++) {
+        updatedArr.push(shuffledArray.slice(index, index + userArr[i].length));
+        index += userArr[i].length;
+      }
+      sameSeatCount = countSameSeat(userArr, updatedArr);
+    } while (sameSeatCount >= 6);
 
     setUserArr(updatedArr);
   };
