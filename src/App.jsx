@@ -51,6 +51,7 @@ let initialNameArr = [
 function App() {
   const iterator = [1, 2, 3, 4, 5];
   const [nameArr, setNameArr] = useState(initialNameArr);
+  const [modal, setModal] = useState(false);
   const newNameArr = [...nameArr];
   const [modalData, setModalData] = useState({
     col: 1,

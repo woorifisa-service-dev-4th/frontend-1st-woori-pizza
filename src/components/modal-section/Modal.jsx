@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Profile } from "./Profile";
+import { NameArrContext } from "../../contexts/NameArrContext";
 
 const Modal = () => {
+  const context = useContext(NameArrContext);
   return (
-    <div className="modal">
-      <div className="modal_popup">
-        <button className="close_btn" id="circle"></button>
-        <Profile />
+    <>
+      <div className="modal on">
+        <div className="modal_popup">
+          <button
+            className="close_btn"
+            id="circle"
+            onClick={() => context.setModal(false)}
+          ></button>
+          <Profile />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
