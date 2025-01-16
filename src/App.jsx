@@ -53,11 +53,12 @@ let descriptionArr = [];
 function App() {
   const iterator = [1, 2, 3, 4, 5];
   const [nameArr, setNameArr] = useState(initialNameArr);
-  const [modal, setModal] = useState(false);
+  const [modal, setModal] = useState(true);
   const newNameArr = [...nameArr];
   const [modalData, setModalData] = useState({
-    col: 1,
-    row: 1,
+    // TODO: 동적으로 행열 설정해주기
+    col: 0,
+    row: 0,
   });
   // const [isModalOn, setModal] = useState(false);
   let ind = 0;
@@ -65,7 +66,7 @@ function App() {
   const seatSection = newNameArr.map(() => <Line order={iterator[ind++]} />);
 
   return (
-    <ModalContext.Provider value={{ modalData, setModal }}>
+    <ModalContext.Provider value={{ modalData, setModal, modal }}>
       <NameArrContext.Provider value={{ nameArr, setNameArr }}>
         {modal && <Modal />}
         <div className="header">WOORI-PIZZA</div>
