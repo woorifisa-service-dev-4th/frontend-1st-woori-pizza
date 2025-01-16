@@ -157,7 +157,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 20px;
-  background: #ffffff;
+  background: #FFFFFF;
   border-radius: 20px;
   width: 300px;
   height: 400px;
@@ -173,8 +173,6 @@ body {
   border-radius: 50%;
   background-color: red;
 }
-*/
-
 .description-container {
   display: flex;
   flex-direction: column;
@@ -190,10 +188,11 @@ body {
   box-shadow: none;
   border-radius: 4px;
   padding: 8px;
-  min-height: 100px; /* 최소 높이를 지정 */
+  min-height: 100px;
 }
 
 textarea {
   width: 100%;
   height: 100%;
 }
+*/

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Line from "./components/seat-section/Line";
 import Modal from "./components/modal-section/Modal";
 import { UserArrContext } from "./contexts/UserArrContext";
@@ -19,7 +19,7 @@ function App() {
       const updatedArr = prevArr.map((group) => {
         return group.map((user) => {
           if (user.id === id) {
-            return { ...user, description: newDescription }; // description을 업데이트
+            return { ...user, description: newDescription }; // description 업데이트
           }
           return user;
         });

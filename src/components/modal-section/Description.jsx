@@ -6,11 +6,10 @@ export const Description = ({ text, setText }) => {
   };
 
   return (
-    <div className="description-container">
+    <div className="flex flex-col gap-2.5 w-[93%] h-[65%] max-w-[300px] mx-auto pt-[5%]">
       <textarea
+        className="h-full w-full p-2 bg-gray-200 text-gray-900 border-2 border-black rounded-lg outline-none shadow-none"
         id="description"
-        type="text"
-        className="description-input"
         onChange={onChange}
         value={text}
         placeholder="상세설명을 입력하세요"
@@ -18,5 +17,4 @@ export const Description = ({ text, setText }) => {
     </div>
   );
 };
-
 export default Description;
