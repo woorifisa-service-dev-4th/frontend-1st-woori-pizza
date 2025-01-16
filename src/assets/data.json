@@ -26,7 +26,7 @@
       { "id": 19, "name": "윤예진", "img": "CHEESE", "description": "" },
       { "id": 20, "name": "윤선영", "img": "TOMATO", "description": "" },
       { "id": 21, "name": "유승한", "img": "PEPPERONI", "description": "" },
-      { "id": 22, "name": "여은동", "img": "BACON", "description": "" },
+      { "id": 22, "name": "빈자리", "img": "BACON", "description": "" },
       { "id": 23, "name": "신희원", "img": "CHEESE", "description": "" },
       { "id": 24, "name": "서채연", "img": "TOMATO", "description": "" }
     ],
@@ -34,7 +34,7 @@
       { "id": 25, "name": "조현식", "img": "PEPPERONI", "description": "" },
       { "id": 26, "name": "조윤주", "img": "BACON", "description": "" },
       { "id": 27, "name": "임지섭", "img": "CHEESE", "description": "" },
-      { "id": 28, "name": "이현경", "img": "TOMATO", "description": "" },
+      { "id": 28, "name": "빈자리", "img": "TOMATO", "description": "" },
       { "id": 29, "name": "이한비", "img": "PEPPERONI", "description": "" },
       { "id": 30, "name": "이원빈", "img": "BACON", "description": "" },
       { "id": 31, "name": "이승준", "img": "CHEESE", "description": "" },

@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      woorifont : ["woori-font"],
+    }
   },
   plugins: [],
 }

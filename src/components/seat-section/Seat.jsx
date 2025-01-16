@@ -10,18 +10,26 @@ const Seat = ({ col, row }) => {
 
   return (
     <>
-      <div className="seat">
+      <div
+        className={`flex-col items-center mt-[1vh] ml-[1vw] mr-[1vw] ${
+          index.name === "빈자리" && "opacity-0"
+        }`}
+      >
         <img
           className="pizza_box"
           src={imgLogo}
           alt="closed pizza box"
           onClick={() => {
-            modalContext.setModal(true);
-            modalContext.setModalData({ col, row });
+            if (index.name !== "빈자리") {
+              modalContext.setModal(true);
+              modalContext.setModalData({ col, row });
+            }
           }}
         />
-        <div className="name_area">
-          <div className="name_tag">{index.name}</div>
+        <div className="flex items-center justify-center w-full height-full m-0 pt-[1vh]">
+          <div className="flex items-center justify-center pl-[10%] pr-[10%] pt-[1%] pb-[1%] bg-white border-2 border-black border-solid text-[2.5vh] font-woorifont">
+            {index.name}
+          </div>
         </div>
       </div>
     </>
