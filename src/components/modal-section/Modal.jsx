@@ -1,16 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
+import { NameArrContext } from "../../contexts/NameArrContext";
 
 const Modal = () => {
+  const context = useContext(NameArrContext);
   return (
-    <div className="modal">
-      <div className="modal_popup">
-        <button className="close_btn" id="circle"></button>
-        {/* <iframe
-          src="profile.html"
-          style="width: 90vw; height: 90vh; border: none;"
-        ></iframe> */}
+    <>
+      <div className="modal on">
+        <div className="modal_popup">
+          <button
+            className="close_btn"
+            id="circle"
+            onClick={() => context.setModal(false)}
+          ></button>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
