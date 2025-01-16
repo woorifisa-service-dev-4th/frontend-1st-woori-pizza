@@ -171,15 +171,3 @@ body {
   border-radius: 50%;
   background-color: red;
 }
-
-.description-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 93%;
-  height: 40%;
-  max-width: 300px;
-  margin: 0 auto;
-  padding-top: 5%;
-
-}
