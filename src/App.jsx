@@ -11,9 +11,8 @@ function App() {
   const [modalData, setModalData] = useState({ col: 0, row: 0 });
 
   const newNameArr = [...nameArr];
-  let ind = 1;
 
-  const seatSection = newNameArr.map(() => <Line order={ind++} />);
+  const seatSection = newNameArr.map((_, ind) => <Line order={ind + 1} />);
 
   return (
     <ModalContext.Provider

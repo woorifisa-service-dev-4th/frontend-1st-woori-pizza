@@ -23,8 +23,13 @@ const Table = ({ direction, order }) => {
 
   return (
     <div className={direction}>
-      {names.map((name) => {
-        return <Seat col={order - 1} row={ind++} />;
+      {names.map((_, ind) => {
+        return (
+          <Seat
+            col={order - 1}
+            row={direction === "leftTable" ? ind : ind + originArr.length / 2}
+          />
+        );
       })}
     </div>
   );
