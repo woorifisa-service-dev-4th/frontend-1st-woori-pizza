@@ -6,9 +6,12 @@ import data from "./assets/data.json";
 import { ModalContext } from "./contexts/ModalContext";
 
 function App() {
-  const [userArr, setUserArr] = useState(data.users);
+  const initialUserArr = localStorage.getItem("userArr")
+    ? JSON.parse(localStorage.getItem("userArr"))
+    : data.users;
+
+  const [userArr, setUserArr] = useState(initialUserArr);
   const [isModalOn, setModal] = useState(false);
-  const [modalData, setModalData] = useState({ col: 0, row: 0 });
 
   const newUsersArr = [...userArr];
   const [selectedUser, setSelectedUser] = useState(null); // Store selected user
@@ -28,12 +31,14 @@ function App() {
     });
   };
 
+  useEffect(() => {
+    localStorage.setItem("userArr", JSON.stringify(userArr));
+  }, [userArr]);
+
   const seatSection = newUsersArr.map((_, ind) => <Line order={ind + 1} />);
 
   return (
-    <ModalContext.Provider
-      value={{ isModalOn, setModal, modalData, setModalData }}
-    >
+    <ModalContext.Provider value={{ isModalOn, setModal }}>
       <UserArrContext.Provider
         value={{
           userArr,

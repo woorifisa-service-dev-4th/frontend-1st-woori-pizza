@@ -5,28 +5,6 @@ import { UserArrContext } from "../../contexts/UserArrContext";
 
 const Line = ({ order }) => {
   const { userArr, setUserArr } = useContext(UserArrContext);
-  let id;
-
-  switch (order) {
-    case 1:
-      id = "first_line";
-      break;
-    case 2:
-      id = "second_line";
-      break;
-    case 3:
-      id = "third_line";
-      break;
-    case 4:
-      id = "fourth_line";
-      break;
-    case 5:
-      id = "fifth_line";
-      break;
-    default:
-      id = "";
-      break;
-  }
 
   const shuffleName = (array) => {
     const shuffled = [...array];
