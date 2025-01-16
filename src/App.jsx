@@ -50,6 +50,7 @@ let initialNameArr = [
 function App() {
   const iterator = [1, 2, 3, 4, 5];
   const [nameArr, setNameArr] = useState(initialNameArr);
+  const [modal, setModal] = useState(false);
   const newNameArr = [...nameArr];
 
   let ind = 0;
@@ -57,8 +58,8 @@ function App() {
   const seatSection = newNameArr.map(() => <Line order={iterator[ind++]} />);
 
   return (
-    <NameArrContext.Provider value={{ nameArr, setNameArr }}>
-      <Modal />
+    <NameArrContext.Provider value={{ nameArr, setNameArr, modal, setModal }}>
+      {modal && <Modal />}
       <div className="header">WOORI-PIZZA</div>
       <div className="body-section">
         <div className="seat-section">{seatSection}</div>
