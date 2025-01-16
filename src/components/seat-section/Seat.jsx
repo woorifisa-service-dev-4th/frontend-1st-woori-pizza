@@ -4,9 +4,6 @@ import { NameArrContext } from "../../contexts/NameArrContext";
 import { ModalContext } from "../../contexts/ModalContext";
 
 const Seat = ({ col, row }) => {
-  console.log(`col: ${col}`);
-  console.log(`row: ${row}`);
-
   const context = useContext(NameArrContext);
   const modalContext = useContext(ModalContext);
   const index = context.nameArr[col][row];
