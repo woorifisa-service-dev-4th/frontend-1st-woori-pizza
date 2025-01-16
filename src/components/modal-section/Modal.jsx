@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { NameArrContext } from "../../contexts/NameArrContext";
+import Description from "./Description";
 
 const Modal = () => {
   const context = useContext(NameArrContext);
@@ -15,6 +16,7 @@ const Modal = () => {
             className="absolute top-2 right-2 w-[1.5vw] h-[1.5vw] rounded-full bg-red-500"
             onClick={() => context.setModal(false)}
           ></button>
+          <Description />
         </div>
       </div>
     </>
