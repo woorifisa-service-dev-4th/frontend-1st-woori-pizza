@@ -1,19 +1,21 @@
-import React, { useState } from 'react';
+import React from "react";
 
-const Description = () => {
-    const [text, setText] = useState('');
-
+const Description = ({ text, setText }) => {
     const onChange = (e) => {
         setText(e.target.value);
     };
 
     return (
-        <div>
-            <input
+        <div className="description-container">
+            <textarea
+
+
+                id="description"
                 type="text"
+                className="description-input"
                 onChange={onChange}
                 value={text}
-                placeholder="상세설명을 적어주세요"
+                placeholder="상세설명을 입력하세요"
             />
         </div>
     );
