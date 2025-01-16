@@ -25,7 +25,7 @@ const Modal = () => {
 
   const handleSave = () => {
     if (selectedUser) {
-      updateDescription(selectedUser.id, description, url);
+      updateDescriptionURL(selectedUser.id, description, url);
       // description을 업데이트
       modalContext.setModal({ isModalOn: false, modalType: null }); // 모달 닫기
     }
@@ -46,7 +46,7 @@ const Modal = () => {
         {modalContext.modalData.modalType === "PROFILE" && (
           <>
             <Profile />
-            <Description text={description} setText={setDescription} url={url} />
+            <Description text={description} setText={setDescription} url={url} setURL={setURL} />
             <button
               onClick={handleSave}
               className="w-full py-2 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 mt-4 mb-4"
