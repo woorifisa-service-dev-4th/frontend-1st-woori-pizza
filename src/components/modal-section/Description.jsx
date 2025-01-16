@@ -1,8 +1,8 @@
 import React from "react";
 
-export const Description = ({ text, setText }) => {
+const Description = ({ text, setText }) => {
   const onChange = (e) => {
-    setText(e.target.value);
+    setText(e.target.value); // Update the description text
   };
 
   return (
@@ -10,6 +10,17 @@ export const Description = ({ text, setText }) => {
       <textarea
         id="description"
         type="text"
+        className="description-input"
+        onChange={onChange}
+        value={text}
+        placeholder="상세설명을 입력하세요"
+      />
+    </div>
+  );
+  return (
+    <div className="description-container">
+      <textarea
+        id="description"
         className="description-input"
         onChange={onChange}
         value={text}

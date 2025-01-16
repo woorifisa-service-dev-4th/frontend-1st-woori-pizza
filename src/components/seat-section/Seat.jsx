@@ -8,6 +8,15 @@ const Seat = ({ col, row }) => {
   const modalContext = useContext(ModalContext);
   const index = context.nameArr[col][row];
 
+  const handleSeatClick = () => {
+    const selectedUser = context.nameArr
+      .flat() // 2D 배열을 1D 배열로 변환
+      .find((user) => user.name === name); // 클릭된 name에 해당하는 유저 찾기
+    if (selectedUser) {
+      context.setSelectedUser(selectedUser); // selectedUser 설정
+      context.setModal(true); // 모달 열기
+    }
+  };
   return (
     <>
       <div
@@ -20,6 +29,7 @@ const Seat = ({ col, row }) => {
           src={imgLogo}
           alt="closed pizza box"
           onClick={() => {
+            handleSeatClick;
             if (index.name !== "빈자리") {
               modalContext.setModal(true);
               modalContext.setModalData({ col, row });

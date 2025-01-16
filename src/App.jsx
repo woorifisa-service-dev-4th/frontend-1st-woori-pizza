@@ -11,21 +11,44 @@ function App() {
   const [modalData, setModalData] = useState({ col: 0, row: 0 });
 
   const newNameArr = [...nameArr];
+  const [selectedUser, setSelectedUser] = useState(null); // Store selected user
 
-  const seatSection = newNameArr.map((_, ind) => <Line order={ind + 1} />);
+  let ind = 0;
+  const updateDescription = (id, newDescription) => {
+    // id를 기준으로 해당 사용자의 description을 업데이트
+    setNameArr((prevArr) => {
+      const updatedArr = prevArr.map((group) => {
+        return group.map((user) => {
+          if (user.id === id) {
+            return { ...user, description: newDescription }; // description을 업데이트
+          }
+          return user;
+        });
+      });
+      return updatedArr;
+    });
+  };
+
+  const seatSection = newNameArr.map(() => <Line order={iterator[ind++]} />);
 
   return (
-    <ModalContext.Provider
-      value={{ isModalOn, modalData, setModal, setModalData }}
+    <NameArrContext.Provider
+      value={{
+        nameArr,
+        setNameArr,
+        modal,
+        setModal,
+        updateDescription,
+        selectedUser,
+        setSelectedUser,
+      }}
     >
-      <NameArrContext.Provider value={{ nameArr, setNameArr }}>
-        {isModalOn && <Modal />}
-        <div className="header">WOORI-PIZZA</div>
-        <div className="body-section">
-          <div className="seat-section">{seatSection}</div>
-        </div>
-      </NameArrContext.Provider>
-    </ModalContext.Provider>
+      {modal && <Modal />}
+      <div className="header">WOORI-PIZZA</div>
+      <div className="body-section">
+        <div className="seat-section">{seatSection}</div>
+      </div>
+    </NameArrContext.Provider>
   );
 }
 
