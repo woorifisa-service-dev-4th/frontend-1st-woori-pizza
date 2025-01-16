@@ -165,3 +165,14 @@ body {
   border-radius: 50%;
   background-color: red;
 }
+
+.description-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 120%;
+  height: 80%;
+  max-width: 300px;
+  margin: 0 auto;
+}

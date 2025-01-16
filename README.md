@@ -52,3 +52,11 @@ Feat: 000구현
 1. HTML & CSS만 적용했을 때 성능
 
    ![alt text](/images/lighthouse1.png)
+
+2. JS까지 적용했을 때 성능
+
+   ![alt text](/images/lighthouse2.png)
+
+## Eslint 적용
+
+![alt text](/images/es.png)

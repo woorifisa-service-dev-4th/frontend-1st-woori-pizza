@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="profileStyle.css" />
+    <script defer src="profile.js"></script>
+    <title>Profile Page</title>
+  </head>
+
+  <body>
+    <div class="image-container">
+      <div class="pizza-box">
+        <div class="profile-container">
+          <!-- 프로필 이미지 -->
+          <div class="profile-img-container">
+            <img
+              id="profile-picture"
+              src="images/profile-user-svgrepo-com.svg"
+              alt="프로필 이미지"
+            />
+            <input type="file" id="file-input" style="display: none" />
+            <div class="profile-name">강아지</div>
+          </div>
+
+          <!-- 상세 설명 -->
+          <div class="profile-info">
+            <h2 class="profile-description">
+              상세 설명: 안녕하세요. 만나서 반갑습니다. 저는 우리 FISA 4기
+              클라우드 서비스 개발파트에 합격했습니다.
+            </h2>
+          </div>
+        </div>
+        <img src="images/empty-pizza-box.png" alt="피자 박스" />
+      </div>
+    </div>
+
+    <script>
+      window.onload = () => {
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get('name'); // 쿼리 파라미터에서 name 가져오기
+
+        if (name) {
+          document.querySelector('.profile-name').textContent = name; // profile-name 업데이트
+        }
+      };
+    </script>
+  </body>
+</html>

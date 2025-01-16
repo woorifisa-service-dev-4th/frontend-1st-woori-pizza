@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "woori-font";
+  src: url("@/assets/fonts/WooridaumR.ttf") format("truetype");
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 10vh;
+  font-size: 10vh;
+  font-family: "woori-font";
+}
+
+.body-section {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)),
+    url("./assets/images/backgroundPage.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.seat-section {
+  width: 96%;
+  /* height: 100vh; */
+  display: flex;
+  justify-self: center;
+  flex-direction: column;
+}
+
+.line {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 15vh;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+.table {
+  display: flex;
+  width: 40vw;
+  display: inline-flex;
+  background-color: #7c4b34;
+  box-shadow: 10px 10px 1px rgb(195, 191, 191);
+}
+
+.leftTable {
+  display: flex;
+  width: 40vw;
+  display: inline-flex;
+  background-color: #7c4b34;
+  box-shadow: -10px 10px 1px rgb(195, 191, 191);
+}
+
+.rightTable {
+  display: flex;
+  width: 40vw;
+  display: inline-flex;
+  background-color: #7c4b34;
+  box-shadow: 10px 10px 1px rgb(195, 191, 191);
+}
+
+.pizza_box {
+  width: 8vw;
+  height: 9vh;
+  /* height: auto; */
+}
+
+.seat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1vh;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+#fifth_line>.leftTable {
+  width: auto;
+}
+
+#fifth_line>.rightTable {
+  width: auto;
+}
+
+.desk_bell {
+  justify-self: center;
+  align-self: flex-end;
+  width: 8vw;
+  height: 8vw;
+  cursor: pointer;
+  background-image: url("@/assets/images/bell1.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.desk_bell:active {
+  background-image: url("@/assets/images/bell2.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.name_tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-color: #fff;
+  border: 1.5px solid #000;
+  font-family: "woori-font";
+  font-size: 2.5vh;
+}
+
+.name_area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.modal {
+  /*팝업 배경*/
+  display: none;
+  /*평소에는 보이지 않도록*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal .modal_popup {
+  /*팝업*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 20px;
+  width: 300px;
+  height: 400px;
+}
+
+.modal.on {
+  display: block;
+}
+
+#circle {
+  width: 1.5vw;
+  height: 1.5vw;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.description-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 20%;
+  gap: 10px;
+  width: 85%;
+  height: 40%;
+  max-width: 300px;
+  margin: 0 auto;
+  border-color: #000
+}
+
+
+.description-input {
+  height: 100%;
+}
+
+
+textarea {
+  border: 2px solid black;
+  outline: none;
+  box-shadow: none;
+  border-radius: 4px;
+}
