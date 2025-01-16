@@ -2,6 +2,7 @@ import { useState } from "react";
 import Line from "./components/seat-section/Line";
 import Modal from "./components/modal-section/Modal";
 import { NameArrContext } from "./contexts/NameArrContext";
+import data from "./assets/data.json";
 
 let initialNameArr = [
   [
@@ -49,7 +50,7 @@ let initialNameArr = [
 
 function App() {
   const iterator = [1, 2, 3, 4, 5];
-  const [nameArr, setNameArr] = useState(initialNameArr);
+  const [nameArr, setNameArr] = useState(data.users);
   const [modal, setModal] = useState(false);
   const newNameArr = [...nameArr];
 
