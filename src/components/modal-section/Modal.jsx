@@ -1,10 +1,13 @@
 import React, { useContext, useState, useEffect } from "react";
-import { NameArrContext } from "../../contexts/NameArrContext";
+import { Profile } from "./Profile";
 import Description from "./Description";
+import { UserArrContext } from "../../contexts/UserArrContext";
+import { ModalContext } from "../../contexts/ModalContext";
 
 const Modal = () => {
-  const context = useContext(NameArrContext);
-  const { selectedUser, updateDescription } = context;
+  const modalContext = useContext(ModalContext);
+  const userArrContext = useContext(UserArrContext);
+  const { selectedUser, updateDescription } = userArrContext;
 
   const [description, setDescription] = useState(
     selectedUser?.description || ""
@@ -21,21 +24,22 @@ const Modal = () => {
     if (selectedUser) {
       updateDescription(selectedUser.id, description);
       // description을 업데이트
-      context.setModal(false); // 모달 닫기
+      modalContext.setModal(false); // 모달 닫기
     }
   };
 
   return (
     <div
       className={`fixed inset-0 bg-black bg-opacity-50 ${
-        context.modal ? "block" : "hidden"
+        modalContext.isModalOn ? "block" : "hidden"
       }`}
     >
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] h-[400px] p-6 bg-white rounded-2xl">
+      <div className="flex-col absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] h-[400px] p-6 bg-white rounded-2xl">
         <button
           className="absolute top-2 right-2 w-[1.5vw] h-[1.5vw] rounded-full bg-red-500"
-          onClick={() => context.setModal(false)}
+          onClick={() => modalContext.setModal(false)}
         ></button>
+        <Profile />
         <Description text={description} setText={setDescription} />
         <button
           onClick={handleSave}

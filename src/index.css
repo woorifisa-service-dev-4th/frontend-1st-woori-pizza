@@ -20,13 +20,16 @@ body {
   height: 10vh;
   font-size: 10vh;
   font-family: "woori-font";
+  padding-bottom: 15vh;
 }
 
 .body-section {
   width: 100%;
-  height: 100vh;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.7),
-      rgba(255, 255, 255, 0.7)),
+  height: 90vh;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
     url("./assets/images/backgroundPage.png");
   background-size: cover;
   background-position: center;
@@ -44,7 +47,7 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 15vh;
+  min-height: 17vh;
   margin-top: 1vh;
   margin-bottom: 1vh;
 }
@@ -52,16 +55,18 @@ body {
 .table {
   display: flex;
   width: 40vw;
+  height: auto;
   display: inline-flex;
-  background-color: #7C4B34;
+  background-color: #7c4b34;
   box-shadow: 10px 10px 1px rgb(195, 191, 191);
 }
 
 .leftTable {
   display: flex;
   width: 40vw;
+  height: auto;
   display: inline-flex;
-  background-color: #7C4B34;
+  background-color: #7c4b34;
   box-shadow: -10px 10px 1px rgb(195, 191, 191);
 }
 
@@ -69,7 +74,7 @@ body {
   display: flex;
   width: 40vw;
   display: inline-flex;
-  background-color: #7C4B34;
+  background-color: #7c4b34;
   box-shadow: 10px 10px 1px rgb(195, 191, 191);
 }
 
@@ -79,20 +84,11 @@ body {
   /* height: auto; */
 }
 
-.seat {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 1vh;
-  margin-left: 1vw;
-  margin-right: 1vw;
-}
-
-#fifth_line>.leftTable {
+#fifth_line > .leftTable {
   width: auto;
 }
 
-#fifth_line>.rightTable {
+#fifth_line > .rightTable {
   width: auto;
 }
 
@@ -111,63 +107,4 @@ body {
   background-image: url("@/assets/images/bell2.png");
   background-size: cover;
   background-position: center;
-}
-
-.name_tag {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  background-color: #fff;
-  border: 1.5px solid #000;
-  font-family: "woori-font";
-  font-size: 2.5vh;
-}
-
-.name_area {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-}
-
-.modal {
-  /*팝업 배경*/
-  display: none;
-  /*평소에는 보이지 않도록*/
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.modal .modal_popup {
-  /*팝업*/
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 20px;
-  background: #FFFFFF;
-  border-radius: 20px;
-  width: 300px;
-  height: 400px;
-}
-
-.modal.on {
-  display: block;
-}
-
-#circle {
-  width: 1.5vw;
-  height: 1.5vw;
-  border-radius: 50%;
-  background-color: red;
 }

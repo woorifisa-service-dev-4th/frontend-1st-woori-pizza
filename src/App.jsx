@@ -1,26 +1,24 @@
 import { useState, useEffect } from "react";
 import Line from "./components/seat-section/Line";
 import Modal from "./components/modal-section/Modal";
-import { NameArrContext } from "./contexts/NameArrContext";
+import { UserArrContext } from "./contexts/UserArrContext";
 import data from "./assets/data.json";
+import { ModalContext } from "./contexts/ModalContext";
 
 function App() {
-  const iterator = [1, 2, 3, 4, 5];
-
-  // 로컬 스토리지에서 nameArr를 불러옴, 없으면 초기 data.users 사용
-  const initialNameArr = localStorage.getItem("nameArr")
-    ? JSON.parse(localStorage.getItem("nameArr"))
+  const initialUserArr = localStorage.getItem("userArr")
+    ? JSON.parse(localStorage.getItem("userArr"))
     : data.users;
 
-  const [nameArr, setNameArr] = useState(initialNameArr);
-  const [modal, setModal] = useState(false);
-  const [selectedUser, setSelectedUser] = useState(null); // 선택된 사용자 저장
+  const [userArr, setUserArr] = useState(initialUserArr);
+  const [isModalOn, setModal] = useState(false);
 
-  let ind = 0;
+  const newUsersArr = [...userArr];
+  const [selectedUser, setSelectedUser] = useState(null); // Store selected user
 
-  // 사용자의 description을 업데이트하는 함수
   const updateDescription = (id, newDescription) => {
-    setNameArr((prevArr) => {
+    // id를 기준으로 해당 사용자의 description을 업데이트
+    setUserArr((prevArr) => {
       const updatedArr = prevArr.map((group) => {
         return group.map((user) => {
           if (user.id === id) {
@@ -33,31 +31,30 @@ function App() {
     });
   };
 
-  // nameArr가 변경될 때마다 로컬 스토리지에 저장
   useEffect(() => {
-    localStorage.setItem("nameArr", JSON.stringify(nameArr));
-  }, [nameArr]);
+    localStorage.setItem("userArr", JSON.stringify(userArr));
+  }, [userArr]);
 
-  const seatSection = nameArr.map(() => <Line order={iterator[ind++]} />);
+  const seatSection = newUsersArr.map((_, ind) => <Line order={ind + 1} />);
 
   return (
-    <NameArrContext.Provider
-      value={{
-        nameArr,
-        setNameArr,
-        modal,
-        setModal,
-        updateDescription,
-        selectedUser,
-        setSelectedUser,
-      }}
-    >
-      {modal && <Modal />}
-      <div className="header">WOORI-PIZZA</div>
-      <div className="body-section">
-        <div className="seat-section">{seatSection}</div>
-      </div>
-    </NameArrContext.Provider>
+    <ModalContext.Provider value={{ isModalOn, setModal }}>
+      <UserArrContext.Provider
+        value={{
+          userArr,
+          setUserArr,
+          updateDescription,
+          selectedUser,
+          setSelectedUser,
+        }}
+      >
+        {isModalOn && <Modal />}
+        <div className="header">WOORI-PIZZA</div>
+        <div className="body-section">
+          <div className="seat-section">{seatSection}</div>
+        </div>
+      </UserArrContext.Provider>
+    </ModalContext.Provider>
   );
 }
 
