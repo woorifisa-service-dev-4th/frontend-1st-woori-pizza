@@ -16,13 +16,13 @@ function App() {
   const newUsersArr = [...userArr];
   const [selectedUser, setSelectedUser] = useState(null); // Store selected user
 
-  const updateDescription = (id, newDescription) => {
+  const updateDescriptionURL = (id, newDescription, newURL) => {
     // id를 기준으로 해당 사용자의 description을 업데이트
     setUserArr((prevArr) => {
       const updatedArr = prevArr.map((group) => {
         return group.map((user) => {
           if (user.id === id) {
-            return { ...user, description: newDescription }; // description 업데이트
+            return { ...user, description: newDescription, url: newURL }; // description, url 업데이트
           }
           return user;
         });
@@ -44,7 +44,7 @@ function App() {
         value={{
           userArr,
           setUserArr,
-          updateDescription,
+          updateDescriptionURL,
           selectedUser,
           setSelectedUser,
         }}
